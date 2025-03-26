@@ -1,0 +1,22 @@
+@Contatos.CreateProducer_HostAddress = http://localhost:5193
+
+GET {{Contatos.CreateProducer_HostAddress}}/health/ready
+Accept: application/json
+
+###
+
+GET {{Contatos.CreateProducer_HostAddress}}/api/cadastrocontato
+
+###
+
+POST {{Contatos.CreateProducer_HostAddress}}/api/cadastrocontato
+Content-Type: application/json
+
+{
+  "nomeCompleto": "Felipe Bolivar",
+  "DDD": 11,
+  "Telefone": 992356623,
+  "Email": "felipe@email.gov"
+}
+
+###
